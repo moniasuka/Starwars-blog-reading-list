@@ -10,7 +10,7 @@ export function planetActions(getStore, getActions, setStore) {
             //console.log(BASE_URL)
             let resultado = await fetch(`${BASE_URL}planets`)
             if (resultado.ok) {
-                alert("Se trajo correctamente la lista de planetas")
+               // alert("Se trajo correctamente la lista de planetas")
                 let resultadoJSON = await resultado.json()
                 //console.log("resultadoJSON: ", resultadoJSON.results)
                 let store = getStore();
@@ -25,7 +25,7 @@ export function planetActions(getStore, getActions, setStore) {
         getSinglePlanet: async (numero) => {
             let resultado = await fetch(`${BASE_URL}planets/${numero}`)
             if (resultado.ok) {
-                alert("Se trajo correctamente el planeta solicitado")
+                //alert("Se trajo correctamente el planeta solicitado")
                 let resultadoJSON = await resultado.json()
                 console.log("resultadoJSON: ", resultadoJSON.result)
                 let store = getStore();

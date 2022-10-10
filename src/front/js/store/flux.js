@@ -1,4 +1,6 @@
+import { peopleStore, peopleActions } from "./peoples.js";
 import { planetStore, planetActions } from "./planetas.js";
+import { vehicleStore, vehicleActions } from "./vehicles.js";
 
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
@@ -20,14 +22,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 					indice: 1
 				}
 			],
-			...planetStore
+			...peopleStore,
+			...planetStore,
+			...vehicleStore,
+		
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
 			},
-
 			getMessage: async () => {
 				try {
 					// fetching data from the backend
@@ -54,7 +58,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 				//reset the local store
 				setStore({ ...store, demo: demo });
 			},
-			...planetActions(getStore, getActions, setStore)
+			...peopleActions(getStore, getActions, setStore),
+			...planetActions(getStore, getActions, setStore),
+			...vehicleActions(getStore, getActions, setStore)
 		}
 	};
 };
