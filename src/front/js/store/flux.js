@@ -25,6 +25,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			...peopleStore,
 			...planetStore,
 			...vehicleStore,
+			favorites: []
 		
 		},
 		actions: {
@@ -60,7 +61,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			...peopleActions(getStore, getActions, setStore),
 			...planetActions(getStore, getActions, setStore),
-			...vehicleActions(getStore, getActions, setStore)
+			...vehicleActions(getStore, getActions, setStore),
+			//function to add the item the user likes onto the favorites list
+			addfavorites: (aux) => { 
+				const store = getStore();
+				let auxArray = store.favorites.slice()
+				auxArray.push(aux)
+				setStore({...store,favorites: auxArray})
+			}
+
 		}
 	};
 };

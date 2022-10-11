@@ -13,7 +13,7 @@ export const Home = () => {
       <div className="d-flex flex-row flex-nowrap mt-3 mb-3" style={{ overflowX: "scroll" }}>
 				{store.peoples.map((item, index) => {
 					return (
-						<div className="col mx-1 px-1">
+						<div key={index} className="col mx-1 px-1">
 						<div className="card" style={{ width: "18rem" }}>
 						  <img src="https://via.placeholder.com/400x200" className="card-img-top" alt="..." />
 						  <div className="card-body">
@@ -29,7 +29,7 @@ export const Home = () => {
 								</Link>
 							</div>
 							<div> 
-								<button  className="btn btn-outline-warning"><i className="fas fa-heart"></i></button>
+								<button onClick ={(e) => {actions.addfavorites(item.name)}} className="btn btn-outline-warning"><i className="fas fa-heart"></i></button>
 								
 							</div>
 							</div>						  
@@ -41,13 +41,10 @@ export const Home = () => {
       </div>
 
       <h1 className="text-danger">Planets</h1>
-      <div
-        className="d-flex flex-row flex-nowrap mt-3 mb-3"
-        style={{ overflowX: "scroll" }}
-      >
+      <div className="d-flex flex-row flex-nowrap mt-3 mb-3" style={{ overflowX: "scroll" }}>
         {store.planets.map((item, index) => {
           return (
-            <div className="col mx-1 px-1">
+            <div key={index} className="col mx-1 px-1">
               <div className="card" style={{ width: "18rem" }}>
                 <img src="https://via.placeholder.com/400x200" className="card-img-top" alt="..." />
                 <div className="card-body">
@@ -74,7 +71,7 @@ export const Home = () => {
         >
           {store.vehicles.map((item, index) => {
             return (
-              <div className="col mx-1 px-1">
+              <div  key={index} className="col mx-1 px-1">
                 <div className="card" style={{ width: "18rem" }}>
                   <img src="https://via.placeholder.com/400x200" className="card-img-top" alt="..." />
                   <div className="card-body">
