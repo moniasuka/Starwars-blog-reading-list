@@ -18,11 +18,11 @@ export const Peoplesingle = props => {
 		}
 	}, [])
 	return (
-        <div className="container mt-5 mb-5">
+        <div className="container spacing mb-5">
 		<div className="row">
             <div  className="col"><img src="https://via.placeholder.com/400x200" /></div>
             <div  className="col">
-                <div><h1 className="display-4">{store.people.properties ? store.people.properties.name : "no ha cargado"} </h1></div>
+                <div><h1 className="display-4">{store.people.properties ? store.people.properties.name : "Loading..."} </h1></div>
                 <div><p className="fs-5">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. </p></div>
             </div>            
         </div>	
@@ -30,13 +30,13 @@ export const Peoplesingle = props => {
         <hr className="my-4 text-danger" />
         
         <div className="row mb-5 text-danger fs-5 fw-normal">
-            <div  className="col"> <p className="fw-bold">Height</p>{store.people.properties ? store.people.properties.height : "no ha cargado"}</div>
-            <div  className="col"> <p className="fw-bold">Mass </p>{store.people.properties ? store.people.properties.mass : "no ha cargado"}</div>
-            <div  className="col"> <p className="fw-bold">Hair color </p>{store.people.properties ? store.people.properties.hair_color : "no ha cargado"} </div>
-            <div  className="col"> <p className="fw-bold">Skin color </p> {store.people.properties ? store.people.properties.skin_color : "no ha cargado"}</div>
-            <div  className="col"> <p className="fw-bold">Eye color </p>{store.people.properties ? store.people.properties.eye_color : "no ha cargado"}</div>
-            <div  className="col"> <p className="fw-bold">Birth year </p>{store.people.properties ? store.people.properties.birth_year : "no ha cargado"}</div>
-            <div  className="col"> <p className="fw-bold">Gender </p>{store.people.properties ? store.people.properties.gender : "no ha cargado"} </div>
+            <div  className="col"> <p className="fw-bold">Height</p>{store.people.properties ? store.people.properties.height : "Loading..."}</div>
+            <div  className="col"> <p className="fw-bold">Mass </p>{store.people.properties ? store.people.properties.mass : "Loading..."}</div>
+            <div  className="col"> <p className="fw-bold">Hair color </p>{store.people.properties ? store.people.properties.hair_color : "Loading..."} </div>
+            <div  className="col"> <p className="fw-bold">Skin color </p> {store.people.properties ? store.people.properties.skin_color : "Loading..."}</div>
+            <div  className="col"> <p className="fw-bold">Eye color </p>{store.people.properties ? store.people.properties.eye_color : "Loading..."}</div>
+            <div  className="col"> <p className="fw-bold">Birth year </p>{store.people.properties ? store.people.properties.birth_year : "Loading..."}</div>
+            <div  className="col"> <p className="fw-bold">Gender </p>{store.people.properties ? store.people.properties.gender : "Loading..."} </div>
             
         </div>	         
 

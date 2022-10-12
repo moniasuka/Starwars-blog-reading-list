@@ -23,9 +23,9 @@ export const Navbar = () => {
 									Favorites <span class="badge bg-secondary">{store.favorites.length}</span>
 								</a>
 								<div className="dropdown-menu" aria-labelledby="navbarDropdown">
-								
+								<ul className="justify-content-between">
 									<Addfavorites/>
-									
+								</ul>
 								</div>
 								</li>
 							

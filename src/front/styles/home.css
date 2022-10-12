@@ -13,3 +13,13 @@ hr {
     width: 100px;
     height:auto;
   }
+
+ .navbar-nav .dropdown-menu{
+    width: 200px !important;
+
+  }
+
+.spacing {
+
+  margin-top: 100px;
+}

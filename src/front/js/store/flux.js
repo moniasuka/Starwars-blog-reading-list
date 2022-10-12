@@ -69,7 +69,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 				let auxArray = store.favorites.slice()
 				auxArray.push(aux)
 				setStore({...store,favorites: auxArray})
-			}
+			},
+			 		
+			 removefavorites: (aux) => {
+				const store = getStore();  
+				const auxArray = store.favorites.filter((_, index) => index !== 0);
+				setStore({...store,favorites: auxArray})							
+				
+				}
+				  
+							
+			
+
+
 
 		}
 	};

@@ -8,8 +8,8 @@ export const Home = () => {
   const { store, actions } = useContext(Context);
 
   return (
-    <div className="container">
-        <h1 className="text-danger mt-3">Characters</h1>
+    <div className="container spacing">
+        <h1 className="text-danger mt-5">Characters</h1>
         <div className="d-flex flex-row flex-nowrap mt-3 mb-3" style={{ overflowX: "scroll" }}>
           {store.peoples.map((item, index) => {
             return (

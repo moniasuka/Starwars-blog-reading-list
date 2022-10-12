@@ -10,8 +10,9 @@ export const Addfavorites = () => {
         <>
             {                  
                 store.favorites.map((item,index) => {
-                return (
-                        <div className = "ms-1 me-1 text-primary" key={index}>{item} </div>
+                return (                  
+
+                       <li className = "ms-1 me-1 text-primary" key={index}>{item} <i onClick = {() => {actions.removefavorites(index)}} class="fa fa-trash" aria-hidden="true"></i></li> 
 
                 )
             })
