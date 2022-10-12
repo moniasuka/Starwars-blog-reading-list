@@ -25,7 +25,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			...peopleStore,
 			...planetStore,
 			...vehicleStore,
-			favorites: []
+			favorites: [],
+			
 		
 		},
 		actions: {
