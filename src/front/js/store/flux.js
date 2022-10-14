@@ -73,7 +73,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			 		
 			 removefavorites: (aux) => {
 				const store = getStore();  
-				const auxArray = store.favorites.filter((_, index) => index !== 0);
+				const auxArray = store.favorites.filter((_, index) => index !== aux);
 				setStore({...store,favorites: auxArray})							
 				
 				}
